@@ -1,12 +1,14 @@
-// tailwind.config.js
 module.exports = {
-  content: ['./index.html', './src/**/*.{svelte,js}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+  ],
   theme: {
     extend: {},
   },
-  variants: {
-    extend: {},
+  daisyui: {
+    themes: ["dracula"],
   },
-  plugins: [],
-}
+  plugins: [
+    require('daisyui'),
+  ],
+};
